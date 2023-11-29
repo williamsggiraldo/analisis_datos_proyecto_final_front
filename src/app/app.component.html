@@ -1,0 +1,73 @@
+<nav class="navbar navbar-expand-xl navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <h1>¿Es usted propenso a sufrir un ACV?</h1>
+    </a>
+  </div>
+</nav>
+<form [formGroup]="miFormulario" (ngSubmit)="submitForm()">
+  <div class="container py-3">
+    <!-- Edad -->
+    <div class="row my-3">
+      <div class="col">
+        <label for="exampleFormControlInput1" class="form-label">Edad</label>
+        <input type="number" class="form-control form-control-sm" id="exampleFormControlInput1" formControlName="edad" placeholder="Ingresa tu edad en años">
+      </div>
+    </div>
+    <!-- Afección cardiaca -->
+    <div class="row my-3">
+      <div class="col">
+        <label for="exampleFormControlInput1" class="form-label">Afección cardiaca</label>
+        <input type="number" class="form-control form-control-sm" id="exampleFormControlInput1" formControlName="afeccion" placeholder="Uno (1) para sí, cero (0) para no">
+      </div>
+    </div>
+    <!-- Nivel de glucosa -->
+    <div class="row my-3">
+      <div class="col">
+        <label for="exampleFormControlInput1" class="form-label">Nivel de glucosa</label>
+        <input type="number" class="form-control form-control-sm" id="exampleFormControlInput1" formControlName="glucosa" placeholder="mg/dl (miligramos por decilitro)">
+      </div>
+    </div>
+    <!-- Hipertensión -->
+    <div class="row my-3">
+      <div class="col">
+        <label for="exampleFormControlInput1" class="form-label">Hipertensión</label>
+        <input type="number" class="form-control form-control-sm" id="exampleFormControlInput1" formControlName="hipertension" placeholder="Uno (1) para sí, cero (0) para no">
+      </div>
+    </div>
+    <!-- Matrimonio -->
+    <div class="row my-3">
+      <div class="col">
+        <label for="exampleFormControlInput1" class="form-label">¿Alguna vez estuvo casada/o?</label>
+        <input type="number" class="form-control form-control-sm" id="exampleFormControlInput1" formControlName="matrimonio" placeholder="Uno (1) para sí, cero (0) para no">
+      </div>
+    </div>
+    <!-- Fumador -->
+    <div class="row my-3">
+      <div class="col">
+        <label for="exampleFormControlInput1" class="form-label">¿Fuma o alguna vez fumó?</label>
+        <input type="number" class="form-control form-control-sm" id="exampleFormControlInput1" formControlName="fumador" placeholder="Uno (1) para sí, cero (0) para no">
+      </div>
+    </div>
+    <!-- Ocupación -->
+    <div class="row my-3">
+      <div class="col">
+        <label for="exampleFormControlInput1" class="form-label">¿Es trabajador independiente?</label>
+        <input type="number" class="form-control form-control-sm" id="exampleFormControlInput1" formControlName="ocupacion" placeholder="Uno (1) para sí, cero (0) para no">
+      </div>
+    </div>
+    <!-- Índice de masa corporal -->
+    <div class="row my-3">
+      <div class="col">
+        <label for="exampleFormControlInput1" class="form-label">Índice de masa corporal</label>
+        <input type="number" class="form-control form-control-sm" id="exampleFormControlInput1" formControlName="imc" placeholder="IMC = peso (kg)/ [estatura (m)]^2">
+      </div>
+    </div>
+    <div class="row my-3">
+      <div class="col">
+        <button type="submit" class="btn btn-primary">Predecir</button>
+      </div>
+    </div>
+  </div>
+</form>
+
