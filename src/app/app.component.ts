@@ -86,4 +86,10 @@ export class AppComponent implements OnInit {
     }
   }
 
+  limpiar() {
+    this.miFormulario.reset()
+    this.riesgoAltoAcv = false;
+    this.riesgoBajoAcv = false;
+  }
+
 }

@@ -68,17 +68,22 @@
         <button type="submit" class="btn btn-primary">Predecir</button>
       </div>
     </div>
+    <div class="row my-3">
+      <div class="col">
+        <button type="button" class="btn btn-primary" (click)="limpiar()">Limpiar</button>
+      </div>
+    </div>
   </div>
 </form>
 
 <div *ngIf="riesgoBajoAcv" class="container py-3">
   <div class="alert alert-success" role="alert">
-    A simple primary alert—check it out!
+    ¡El riesgo de sufrir un ACV es <strong>bajo</strong> !
   </div>
 </div>
 
 <div *ngIf="riesgoAltoAcv" class="container py-3">
   <div class="alert alert-danger" role="alert">
-    A simple danger alert—check it out!
+    ¡El riesgo de sufrir un ACV es <strong>alto</strong> !
   </div>
 </div>
