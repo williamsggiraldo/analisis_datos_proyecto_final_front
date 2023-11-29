@@ -11,6 +11,8 @@ import { PrediccionService } from 'src/services/prediccion.service';
 export class AppComponent implements OnInit {
 
   miFormulario: FormGroup;
+  riesgoAltoAcv: boolean = false;
+  riesgoBajoAcv: boolean = false;
 
   constructor(
       private fb: FormBuilder,
@@ -38,6 +40,7 @@ export class AppComponent implements OnInit {
       this.prediccionService.predecir(this.getDatos()).subscribe(
         response => {
           console.log('Respuesta de la API:', response[0]);
+          this.setAcvValor(response[0]);
           // Realiza acciones adicionales con la respuesta de la API si es necesario
         },
         error => {
@@ -73,6 +76,14 @@ export class AppComponent implements OnInit {
       bmi: this.miFormulario.get('imc')?.value
     }
     return datos;
+  }
+
+  private setAcvValor(valor: number) {
+    if (valor === 1) {
+      this.riesgoAltoAcv = true;
+    } else {
+      this.riesgoBajoAcv = true;
+    }
   }
 
 }
