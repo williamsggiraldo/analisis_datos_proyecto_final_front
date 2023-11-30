@@ -15,8 +15,10 @@ export class PrediccionService {
 
   predecir(data: DatosPrediccion): Observable<any> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    headers.append('Content-Security-Policy', 'upgrade-insecure-requests');
     console.table(data);
-    return this.http.post<any>(`${this.apiUrl}`, data);
+    console.table(headers);
+    return this.http.post<any>(`${this.apiUrl}`, data, {headers});
     //return this.http.get<any>(`${this.apiUrl}`);
   }
 
