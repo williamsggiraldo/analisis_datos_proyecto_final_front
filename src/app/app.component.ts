@@ -39,8 +39,8 @@ export class AppComponent implements OnInit {
       console.log('Formulario enviado:', this.miFormulario.value);
       this.prediccionService.predecir(this.getDatos()).subscribe(
         response => {
-          console.log('Respuesta de la API:', response[0]);
-          this.setAcvValor(response[0]);
+          console.log('Respuesta de la API:', response);
+          //this.setAcvValor(response[0]);
           // Realiza acciones adicionales con la respuesta de la API si es necesario
         },
         error => {
