@@ -8,7 +8,7 @@ import { DatosPrediccion } from 'src/model/DatosPrediccion';
 })
 export class PrediccionService {
 
-  private apiUrl = 'http://174.129.103.196:8000/predict';
+  private apiUrl = 'https://174.129.103.196:8000/predict';
 
   constructor(private http: HttpClient) { }
 
