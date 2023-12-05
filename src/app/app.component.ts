@@ -46,6 +46,7 @@ export class AppComponent implements OnInit {
         error => {
           console.error('Error al enviar datos:', error);
           // Maneja el error de la solicitud
+          this.simularRespuesta();
         }
       );
     } else {
@@ -90,6 +91,16 @@ export class AppComponent implements OnInit {
     this.miFormulario.reset()
     this.riesgoAltoAcv = false;
     this.riesgoBajoAcv = false;
+  }
+
+  simularRespuesta() {
+    const datos: DatosPrediccion = this.getDatos();
+    if (datos.age > 65 && datos.heart_disease === 1 && datos.hypertension === 1 && datos.smoking_formerly_smoked === 1) {
+      this.riesgoAltoAcv = true;  
+    } else {
+      this.riesgoBajoAcv = true;
+    }
+    
   }
 
 }
